@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SwiftShell"
+               BlueprintIdentifier = "OBJ_35"
                BuildableName = "SwiftShell.framework"
                BlueprintName = "SwiftShell"
                ReferencedContainer = "container:testcommit.xcodeproj">
@@ -28,7 +28,21 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_testcommit"
+               BlueprintIdentifier = "OBJ_50"
+               BuildableName = "FileSmith.framework"
+               BlueprintName = "FileSmith"
+               ReferencedContainer = "container:testcommit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_65"
                BuildableName = "testcommit"
                BlueprintName = "testcommit"
                ReferencedContainer = "container:testcommit.xcodeproj">
@@ -59,7 +73,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "______Target_SwiftShell"
+            BlueprintIdentifier = "OBJ_35"
             BuildableName = "SwiftShell.framework"
             BlueprintName = "SwiftShell"
             ReferencedContainer = "container:testcommit.xcodeproj">

@@ -15,7 +15,7 @@ extension Dictionary where Key:Hashable {
 }
 
 // Prepare an environment as close to a new OS X user account as possible.
-var clean = ShellContext(main)
+var clean = CustomContext(main)
 let cleanenvvars = ["TERM_PROGRAM", "SHELL", "TERM", "TMPDIR", "Apple_PubSub_Socket_Render", "TERM_PROGRAM_VERSION", "TERM_SESSION_ID", "USER", "SSH_AUTH_SOCK", "__CF_USER_TEXT_ENCODING", "PATH", "PWD", "XPC_FLAGS", "XPC_SERVICE_NAME", "SHLVL", "HOME", "LOGNAME", "LC_CTYPE", "_"]
 clean.env = clean.env.filterToDictionary(keys: cleanenvvars)
 clean.env["PATH"] = "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -34,7 +34,7 @@ do {
 	if Files.fileExists(atPath: clean.currentdirectory + "Package.swift") {
 		// Use the version of Swift defined in ".swift-version".
 		// If that file does not exist, or that version is not installed, use the system default.
-		clean.env["TOOLCHAINS"] = run(bash:"defaults read /Library/Developer/Toolchains/swift-`cat .swift-version`.xctoolchain/Info CFBundleIdentifier || echo swift")
+		clean.env["TOOLCHAINS"] = run(bash:"defaults read /Library/Developer/Toolchains/swift-`cat .swift-version`.xctoolchain/Info CFBundleIdentifier || echo swift").stdout
 		try clean.runAndPrint("swift","build")
 		try clean.runAndPrint("swift","test")
 	}
