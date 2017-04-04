@@ -37,11 +37,31 @@ do {
 	if testdir.contains("Package.swift") {
 		// Use the version of Swift defined in ".swift-version".
 		// If that file does not exist, or that version is not installed, use the system default.
-		clean.env["TOOLCHAINS"] = (run("defaults", "read", "/Library/Developer/Toolchains/swift-\(run("cat", ".swift-version").stdout).xctoolchain/Info", "CFBundleIdentifier") || run("echo", "swift")).stdout
+		let dotversion = clean.run("cat", ".swift-version").stdout
+		let fullversion = dotversion.characters.count > 8 ? dotversion : dotversion + "-RELEASE"
+		clean.env["TOOLCHAINS"] = (
+			clean.run("defaults", "read",
+			          "/Library/Developer/Toolchains/swift-\(fullversion).xctoolchain/Info", "CFBundleIdentifier")
+			|| clean.run("echo", "swift")
+			).stdout
+
 		try clean.runAndPrint("swift","build")
 
-		if !testdir.directories("Tests/*").isEmpty {
-			try clean.runAndPrint("swift","test")
+		let packagedescription = clean.run("swift", "package", "describe")
+		if packagedescription.succeeded {
+			if packagedescription.stdout.contains("Test module: true") {
+				try clean.runAndPrint("swift", "test")
+			}
+		} else { // Swift < 3.1
+			let runtests = clean.run("swift", "test")
+			if let error = runtests.error {
+				if !runtests.stderror.contains("no tests found to execute") {
+					main.stderror.write(runtests.stderror) // test results are printed to stderror.
+					throw error
+				}
+			} else {
+				main.stderror.write(runtests.stderror)
+			}
 		}
 	}
 
