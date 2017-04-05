@@ -16,7 +16,7 @@ extension Dictionary where Key:Hashable {
 
 // Prepare an environment as close to a new OS X user account as possible.
 var cleanctx = CustomContext(main)
-let cleanenvvars = ["TERM_PROGRAM", "SHELL", "TERM", "TMPDIR", "Apple_PubSub_Socket_Render", "TERM_PROGRAM_VERSION", "TERM_SESSION_ID", "USER", "SSH_AUTH_SOCK", "__CF_USER_TEXT_ENCODING", "PATH", "XPC_FLAGS", "XPC_SERVICE_NAME", "SHLVL", "HOME", "LOGNAME", "LC_CTYPE", "_"]
+let cleanenvvars = ["TERM_PROGRAM", "SHELL", "TERM", "TMPDIR", "Apple_PubSub_Socket_Render", "TERM_PROGRAM_VERSION", "TERM_SESSION_ID", "USER", "SSH_AUTH_SOCK", "__CF_USER_TEXT_ENCODING", "XPC_FLAGS", "XPC_SERVICE_NAME", "SHLVL", "HOME", "LOGNAME", "LC_CTYPE", "_"]
 cleanctx.env = cleanctx.env.filterToDictionary(keys: cleanenvvars)
 cleanctx.env["PATH"] = "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
@@ -41,8 +41,7 @@ do {
 		let dotversion = cleanctx.run("cat", ".swift-version").stdout
 		let fullversion = dotversion.characters.count > 8 ? dotversion : dotversion + "-RELEASE"
 		cleanctx.env["TOOLCHAINS"] = (
-			cleanctx.run("defaults", "read",
-			          "/Library/Developer/Toolchains/swift-\(fullversion).xctoolchain/Info", "CFBundleIdentifier")
+			cleanctx.run("defaults", "read", "/Library/Developer/Toolchains/swift-\(fullversion).xctoolchain/Info", "CFBundleIdentifier")
 			|| cleanctx.run("echo", "swift")
 			).stdout
 
