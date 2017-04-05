@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "9999"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_35"
+               BlueprintIdentifier = "OBJ_36"
                BuildableName = "SwiftShell.framework"
                BlueprintName = "SwiftShell"
                ReferencedContainer = "container:testcommit.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_50"
+               BlueprintIdentifier = "OBJ_51"
                BuildableName = "FileSmith.framework"
                BlueprintName = "FileSmith"
                ReferencedContainer = "container:testcommit.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_65"
+               BlueprintIdentifier = "OBJ_66"
                BuildableName = "testcommit"
                BlueprintName = "testcommit"
                ReferencedContainer = "container:testcommit.xcodeproj">
@@ -73,7 +73,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_35"
+            BlueprintIdentifier = "OBJ_36"
             BuildableName = "SwiftShell.framework"
             BlueprintName = "SwiftShell"
             ReferencedContainer = "container:testcommit.xcodeproj">
