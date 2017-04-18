@@ -9,7 +9,7 @@ extension Dictionary where Key:Hashable {
 		where C.Iterator.Element == Key, C.IndexDistance == Int {
 
 		var result = [Key:Value](minimumCapacity: keys.count)
-		for key in keys { result[key] = self[key]	}
+		for key in keys { result[key] = self[key] }
 		return result
 	}
 }
