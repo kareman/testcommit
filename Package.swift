@@ -4,5 +4,5 @@ let package = Package(
     name: "testcommit"
 )
 
-package.dependencies.append(.Package(url: "https://github.com/kareman/SwiftShell", "3.0.0-beta"))
-package.dependencies.append(.Package(url: "https://github.com/kareman/FileSmith", "0.1.4"))
+package.dependencies.append(.Package(url: "https://github.com/kareman/SwiftShell", "3.0.0"))
+package.dependencies.append(.Package(url: "https://github.com/kareman/FileSmith", "0.1.5"))

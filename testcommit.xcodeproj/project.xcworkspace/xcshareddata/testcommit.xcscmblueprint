@@ -1,20 +1,28 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7013FAC02DE7F5061723379500C7BF581947C573",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "8524CD90B0B06309637E46DA8633449AD5125738" : 9223372036854775807,
+    "7013FAC02DE7F5061723379500C7BF581947C573" : 9223372036854775807,
     "BF7C67668F4701C0AE5156F0E6F0CA70C1C6C61F" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1A9B3A01-38CC-4623-B57D-AF51980D1E25",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "8524CD90B0B06309637E46DA8633449AD5125738" : "testcommit\/.build\/checkouts\/FileSmith-4687466365391384720\/",
+    "7013FAC02DE7F5061723379500C7BF581947C573" : "testcommit\/",
     "BF7C67668F4701C0AE5156F0E6F0CA70C1C6C61F" : "testcommit\/.build\/checkouts\/SwiftShell--3495906201786892477\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "testcommit",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "testcommit.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kareman\/testcommit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7013FAC02DE7F5061723379500C7BF581947C573"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kareman\/FileSmith",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
